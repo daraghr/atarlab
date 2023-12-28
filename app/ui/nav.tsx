@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import clsx from "clsx";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 
 const links = [
     {
@@ -28,7 +28,7 @@ const links = [
 ]
 
 const nav = () => {
-    const pathname = usePathname();
+    // const pathname = usePathname();
     return ( 
         <div className="flex space-x-[50px] max-w-[60%] text-grey">
             {links.map((link) => {
@@ -38,9 +38,9 @@ const nav = () => {
             href={link.href}
             className={clsx(
               `flex items-center ${link.class}`,
-              {
-                'font-bold text-blue': pathname === link.href,
-              },
+              // {
+              //   'font-bold text-blue': pathname === link.href,
+              // },
             )}
           >
             <p className="">{link.name}</p>
