@@ -1,24 +1,20 @@
-'use client'
-
 import Link from "next/link";
-import clsx from "clsx";
-// import { usePathname } from "next/navigation";
 
 const links = [
     {
         name: 'Home',
         href: '/',
-        className: 'text-sm'
+        class: 'text-sm'
     },
     {
         name: 'About',
         href: '/about',
-        className: 'text-sm'
+        class: 'text-sm'
     },
     {
         name: 'Contact',
         href: '/contact',
-        className: 'text-sm'
+        class: 'text-sm'
     },
     {
         name: 'ENROL',
@@ -28,7 +24,6 @@ const links = [
 ]
 
 const nav = () => {
-    // const pathname = usePathname();
     return ( 
         <div className="flex space-x-[50px] max-w-[60%] text-grey">
             {links.map((link) => {
@@ -36,12 +31,9 @@ const nav = () => {
           <Link
             key={link.name}
             href={link.href}
-            className={clsx(
-              `flex items-center ${link.class}`,
-              // {
-              //   'font-bold text-blue': pathname === link.href,
-              // },
-            )}
+            className={
+              `flex items-center ${link.class}`
+            }
           >
             <p className="">{link.name}</p>
           </Link>
